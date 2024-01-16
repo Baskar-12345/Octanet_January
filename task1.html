@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        header {
+            background-image: url('https://www.tamilnaducolleges.org/upload/gallery/small/1472734116830.jpg');
+            height: 80vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .logo img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: white;
+        }
+
+        .center_text {
+            text-align: center;
+        }
+
+        #bt1,
+        #bt2,
+        #registerButton {
+            border: 1px solid #333;
+            color: #333;
+            padding: 5px;
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        #bt1:hover,
+        #bt2:hover,
+        #registerButton:hover {
+            background-color: #333;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        #registrationForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+        
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #home1,#about1,#courses1,#contact1{
+            color: white;
+            background-color: lightgreen;
+            width: 600px;
+            height: 200px;
+            padding: 15px;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="https://media.glassdoor.com/sqll/703646/loyola-icam-college-of-engineering-and-technology-squarelogo-1466090965023.png" alt="Logo">
+        </div>
+        <h1>Loyala ICAM College of Engineering and Technology</h1>
+        <div class="center_text">
+           
+            <button id="registerButton" onclick="showRegistrationForm()">Register</button>
+        </div>
+    </header>
+
+    <div id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="registrationNumber">Register Number:</label>
+        <input type="text" id="registrationNumber" name="registrationNumber" required><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required><br>
+
+        <label for="programmingLanguage">Programming Language:</label>
+        <select id="programmingLanguage" name="programmingLanguage">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+        </select><br>
+
+        <button onclick="submitRegistration()">Submit</button>
+    </div>
+    
+    <section id="home">
+    <center>
+        <div id="home1">
+        <h2>Home</h2>
+        <p>The Loyola-ICAM College of Engineering and Technology is a private Catholic engineering and technology school run by the Society of Jesus in Chennai, India. It is approved by AICTE and affiliated with Anna University, Chennai.</p>
+    </center>
+    </div>
+    </section>
+
+    <section id="about">
+        <center>
+        <div id="about1">
+        <h2>About Us</h2>
+        <p>When education was only for the elite and the rich, St Ignatius of Loyola (Founder of the Jesuit Order) founded the Roman College and announced free education.From that time the Jesuits have effectively used education as the key to empowerment of the marginalized and they applied education as the mantra to make the neglected gain leadership in the society.</p>
+    </center>
+    </div>
+    </section>
+
+    <section id="courses">
+    <center>
+        <div id="courses1">
+        <h2>Our Courses</h2>
+        <p>We offer a wide range of courses in various engineering disciplines. Our programs are designed to prepare students for successful careers in the ever-evolving field of technology.</p>
+    </center>
+    </div>
+    </section>
+
+    <section id="contact">
+    <center>
+        <div id="contact1">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please call us at <strong>(044 – 22203111)</strong>.</p>
+    </center>
+    </div>
+    </section>
+
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById('registrationForm').style.display = 'block';
+        }
+
+        function submitRegistration() {
+            // You can add your registration submission logic here
+            alert('Registration submitted successfully!');
+        }
+    </script>
+</body>
+</html>
